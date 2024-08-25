@@ -22,7 +22,13 @@
 # print(f"Happy Birthday {name}")
 # print(f"Your turned {age} Today!")
 #Rectangle calculation of an area
-length =float( input("Enter the length: "))
-width =float( input("Enter the width: "))
-area = length * width
-print(f"Your area is: {area}cm²")
+# length =float( input("Enter the length: "))
+# width =float( input("Enter the width: "))
+# area = length * width
+# print(f"Your area is: {area}cm²")
+#Shopping cart
+# item = input("Which item do your want to buy ? :")
+# quantity =int( input("How many do you want ? :"))
+# price = float(input("What is the price ? : "))
+# total = price * quantity
+# print(f"You have to pay : {total} rupees")
