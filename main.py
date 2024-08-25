@@ -32,3 +32,21 @@
 # price = float(input("What is the price ? : "))
 # total = price * quantity
 # print(f"You have to pay : {total} rupees")
+#arithmetic
+# import math
+# radius = float(input("Enter your radius:"))
+# circumference = 2*math.pi * radius
+# print(f"circumference is :{circumference}")
+#area of a circle
+# import math
+# r = float(input("Enter the radius of the circle:"))
+# area = math.pi * r
+# print(f"Your answer is:{area}")
+#if else
+age =int(input("Enter your age:"))
+if age >= 18:
+    print("Your are an adult")
+elif age <0:
+    print("You have to born , first!")
+else:
+    print("You are not an adult!")
