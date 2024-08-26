@@ -68,3 +68,6 @@
 #     print(f"Your ans is:{num1} / {num2}={answer}")
 # else:
 #     print("Something went wrong!")
+#conditional expressions
+# num = 981
+# print("Your have more time to explore the world"if num <100 else "You have to die")
