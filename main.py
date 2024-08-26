@@ -43,10 +43,28 @@
 # area = math.pi * r
 # print(f"Your answer is:{area}")
 #if else
-age =int(input("Enter your age:"))
-if age >= 18:
-    print("Your are an adult")
-elif age <0:
-    print("You have to born , first!")
-else:
-    print("You are not an adult!")
+# age =int(input("Enter your age:"))
+# if age >= 18:
+#     print("Your are an adult")
+# elif age <0:
+#     print("You have to born , first!")
+# else:
+#     print("You are not an adult!")
+#Python calculator
+# operator = input("Enter the operator(+,-,*,/):")
+# num1 = float(input("Enter your first number:"))
+# num2 = float(input("Enter your second number:"))
+# if operator == '+':
+#     answer = num1 + num2
+#     print(f"Your ans is:{num1} + {num2}={answer}")
+# elif operator == '-':
+#     answer = num1 - num2
+#     print(f"Your ans is:{num1} - {num2}={answer}")
+# elif operator == '*':
+#     answer = num1 * num2
+#     print(f"Your ans is:{num1} * {num2}={answer}")
+# elif operator == '/':
+#     answer = num1 / num2
+#     print(f"Your ans is:{num1} / {num2}={answer}")
+# else:
+#     print("Something went wrong!")
