@@ -108,8 +108,15 @@
 # print(f"Hello {name}")
 
 # Short program
-exercise = input ("Enter your favorite exercise name (Press q for quit):")
-while not exercise == "q":
-    print(f"Your favorite exercise is: {exercise}")
-    exercise = input("Enter your another favorite exercise name: (Press q for quit):")
-print ("See you again boi !")
+# exercise = input ("Enter your favorite exercise name (Press q for quit):")
+# while not exercise == "q":
+#     print(f"Your favorite exercise is: {exercise}")
+#     exercise = input("Enter your another favorite exercise name: (Press q for quit):")
+# print ("See you again boi !")
+
+#Another one
+num = int(input("Enter a number between 1 to 10:"))
+while num < 1 or num > 10:
+    print(f"{num} is invalid")
+    num = int(input("Enter a number between 1 to 10:"))
+print (f"Your number is: {num}")
