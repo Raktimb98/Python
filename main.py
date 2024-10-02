@@ -93,9 +93,16 @@
 # print(debit_number[0:])
 
 # Format Specifiers
-price1 = 3.14159
-price2 = 2.355
-price3 = 21212.674
-print(f"Price1 is {price1:+.2f}")
-print(f"Price2 is {price2:+010}")
-print(f"Price3 is {price3:+,.2f}")
+# price1 = 3.14159
+# price2 = 2.355
+# price3 = 21212.674
+# print(f"Price1 is {price1:+.2f}")
+# print(f"Price2 is {price2:+010}")
+# print(f"Price3 is {price3:+,.2f}")
+
+# While loop
+name = input("Enter your name:")
+while name =="":
+    print("You didn't enter your name")
+    name = input("Enter your name:")
+print(f"Hello {name}")
