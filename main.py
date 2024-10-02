@@ -86,8 +86,16 @@
 #     if has_space:
 #         print("Username must not contain spaces!")
 #Indexing
-debit_number = "5649-6546-6556-5454"
-print(debit_number)
-print(debit_number[0:4])
-print(debit_number[:4])
-print(debit_number[0:])
+# debit_number = "5649-6546-6556-5454"
+# print(debit_number)
+# print(debit_number[0:4])
+# print(debit_number[:4])
+# print(debit_number[0:])
+
+# Format Specifiers
+price1 = 3.14159
+price2 = 2.355
+price3 = 21212.674
+print(f"Price1 is {price1:+.2f}")
+print(f"Price2 is {price2:+010}")
+print(f"Price3 is {price3:+,.2f}")
