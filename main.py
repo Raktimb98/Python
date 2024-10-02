@@ -101,8 +101,15 @@
 # print(f"Price3 is {price3:+,.2f}")
 
 # While loop
-name = input("Enter your name:")
-while name =="":
-    print("You didn't enter your name")
-    name = input("Enter your name:")
-print(f"Hello {name}")
+# name = input("Enter your name:")
+# while name =="":
+#     print("You didn't enter your name")
+#     name = input("Enter your name:")
+# print(f"Hello {name}")
+
+# Short program
+exercise = input ("Enter your favorite exercise name (Press q for quit):")
+while not exercise == "q":
+    print(f"Your favorite exercise is: {exercise}")
+    exercise = input("Enter your another favorite exercise name: (Press q for quit):")
+print ("See you again boi !")
