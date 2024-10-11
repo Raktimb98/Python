@@ -159,18 +159,37 @@
 #     print(x)
 
 #Countdown timer
-import time
+# import time
 # time.sleep(3)
 # print("Time's up")
 
-My_time = int(input("Enter you time in second:"))
-while My_time < 0:
-    print("Enter a valid time!")
-    My_time = int(input("Enter you time in second:"))
-for x in range(My_time,0,-1):
-    second = x % 60
-    minutes =int (x / 60) %60
-    hours = int(x / 3600)
-    print(f"{hours:02}:{minutes:02}:{second:02}")
-    time.sleep(1)
-print("Time's up")
+# My_time = int(input("Enter you time in second:"))
+# while My_time < 0:
+#     print("Enter a valid time!")
+#     My_time = int(input("Enter you time in second:"))
+# for x in range(My_time,0,-1):
+#     second = x % 60
+#     minutes =int (x / 60) %60
+#     hours = int(x / 3600)
+#     print(f"{hours:02}:{minutes:02}:{second:02}")
+#     time.sleep(1)
+# print("Time's up")
+
+#Nested Loop
+# for x in range(3):
+#     for y in range(1,10):
+#         print(y,end=" ")
+#     print()
+
+#Rectangle 
+symbol = input("Enter your symbol:")
+rows = int(input("How many rows do you want:"))
+while rows <= 0:
+    rows = int(input("Enter a valid positive number:"))
+column = int(input("How many columns do you want:"))
+while column <= 0:
+    column = int(input("Enter a valid positive number:"))
+for x in range(rows):
+    for y in range(column):
+        print(symbol,end=" ")
+    print()
