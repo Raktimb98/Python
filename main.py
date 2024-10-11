@@ -168,6 +168,7 @@ while My_time < 0:
     print("Enter a valid time!")
     My_time = int(input("Enter you time in second:"))
 for x in range(My_time,0,-1):
-    print(x)
+    second = x % 60
+    print(f"00:00:{second:02}")
     time.sleep(1)
 print("Time's up")
