@@ -147,13 +147,27 @@
 # print(f"Total amount after {time} years is: {total:.2f}")
 
 #For loops
-for n in range(0,11):
-    print(n)
-print("Hello youth")
+# for n in range(0,11):
+#     print(n)
+# print("Hello youth")
 
-for x in reversed(range(0,11)):
-    print(x)
+# for x in reversed(range(0,11)):
+#     print(x)
 
-customer_id="154984-854-89498-84-56445"
-for x in customer_id:
+# customer_id="154984-854-89498-84-56445"
+# for x in customer_id:
+#     print(x)
+
+#Countdown timer
+import time
+# time.sleep(3)
+# print("Time's up")
+
+My_time = int(input("Enter you time in second:"))
+while My_time < 0:
+    print("Enter a valid time!")
+    My_time = int(input("Enter you time in second:"))
+for x in range(My_time,0,-1):
     print(x)
+    time.sleep(1)
+print("Time's up")
