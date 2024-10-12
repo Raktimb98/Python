@@ -182,14 +182,27 @@
 #     print()
 
 #Rectangle 
-symbol = input("Enter your symbol:")
-rows = int(input("How many rows do you want:"))
-while rows <= 0:
-    rows = int(input("Enter a valid positive number:"))
-column = int(input("How many columns do you want:"))
-while column <= 0:
-    column = int(input("Enter a valid positive number:"))
-for x in range(rows):
-    for y in range(column):
-        print(symbol,end=" ")
-    print()
+# symbol = input("Enter your symbol:")
+# rows = int(input("How many rows do you want:"))
+# while rows <= 0:
+#     rows = int(input("Enter a valid positive number:"))
+# column = int(input("How many columns do you want:"))
+# while column <= 0:
+#     column = int(input("Enter a valid positive number:"))
+# for x in range(rows):
+#     for y in range(column):
+    #     print(symbol,end=" ")
+    # print()
+
+#collection, list , sets and tuples
+fruit = "Mango"
+fruit_list = ["Apple","Banana","Cherry"]
+# print(fruit)
+# print(fruit_list[2])
+# fruit_list[0] ='mango'
+fruit_list.append('Mango')
+# fruit_list.remove('Banana')
+# fruit_list.insert(1,'Litchi')
+fruit_list.sort
+for fruits in fruit_list:
+    print(fruits)
