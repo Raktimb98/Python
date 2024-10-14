@@ -195,14 +195,29 @@
     # print()
 
 #collection, list , sets and tuples
-fruit = "Mango"
-fruit_list = ["Apple","Banana","Cherry"]
+# fruit = "Mango"
+# fruit_list = ["Apple","Banana","Cherry"]
 # print(fruit)
 # print(fruit_list[2])
 # fruit_list[0] ='mango'
-fruit_list.append('Mango')
+# fruit_list.append('Mango')
 # fruit_list.remove('Banana')
 # fruit_list.insert(1,'Litchi')
-fruit_list.sort
-for fruits in fruit_list:
-    print(fruits)
+# fruit_list.sort
+# for fruits in fruit_list:
+#     print(fruits)
+
+#set
+# car = {"Tata","Mahindra","Toyota","Volkswagen","BMW"}
+# print(dir(car))
+# print(car.add("Honda"))
+# print(car.remove("BMW"))
+# print(car)
+
+#Tuples
+my_tuple = ("1","2","3","3","3","4","5")
+# print(my_tuple[0])
+print(my_tuple.count("3"))
+print(my_tuple)
+for items in my_tuple:
+    print(items)
