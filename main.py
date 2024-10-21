@@ -83,23 +83,6 @@
 # for x in customer_id:
 #     print(x)
 
-#Countdown timer
-# import time
-# time.sleep(3)
-# print("Time's up")
-
-# My_time = int(input("Enter you time in second:"))
-# while My_time < 0:
-#     print("Enter a valid time!")
-#     My_time = int(input("Enter you time in second:"))
-# for x in range(My_time,0,-1):
-#     second = x % 60
-#     minutes =int (x / 60) %60
-#     hours = int(x / 3600)
-#     print(f"{hours:02}:{minutes:02}:{second:02}")
-#     time.sleep(1)
-# print("Time's up")
-
 #Nested Loop
 # for x in range(3):
 #     for y in range(1,10):
@@ -133,3 +116,18 @@
 # print(my_tuple)
 # for items in my_tuple:
 #     print(items)
+# 2D array
+car_list = ["BMW","Audi","Toyota","Tata","Volkswagen"]
+food_list = ["Egg roll","Paneer tikka","Egg chicken roll","Chicken satay","Chicken 65"]
+computer_specification = ["H410M","i3 10105f","16GB","1TB","GT 710 ddr3"]
+# favorite_things = [car_list,food_list,computer_specification]
+favorite_things = [["BMW","Audi","Toyota","Tata","Volkswagen"],
+                   ["Egg roll","Paneer tikka","Egg chicken roll","Chicken satay","Chicken 65"],
+["H410M","i3 10105f","16GB","1TB","GT 710 ddr3"]]
+# print(favorite_things[0][0])
+# for collection in favorite_things :
+#     print (collection)
+for collections in favorite_things:
+    for items in collections:
+        print(items,end = " ")
+    print()
