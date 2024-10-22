@@ -116,18 +116,26 @@
 # print(my_tuple)
 # for items in my_tuple:
 #     print(items)
+
 # 2D array
-car_list = ["BMW","Audi","Toyota","Tata","Volkswagen"]
-food_list = ["Egg roll","Paneer tikka","Egg chicken roll","Chicken satay","Chicken 65"]
-computer_specification = ["H410M","i3 10105f","16GB","1TB","GT 710 ddr3"]
+# car_list = ["BMW","Audi","Toyota","Tata","Volkswagen"]
+# food_list = ["Egg roll","Paneer tikka","Egg chicken roll","Chicken satay","Chicken 65"]
+# computer_specification = ["H410M","i3 10105f","16GB","1TB","GT 710 ddr3"]
 # favorite_things = [car_list,food_list,computer_specification]
-favorite_things = [["BMW","Audi","Toyota","Tata","Volkswagen"],
-                   ["Egg roll","Paneer tikka","Egg chicken roll","Chicken satay","Chicken 65"],
-["H410M","i3 10105f","16GB","1TB","GT 710 ddr3"]]
+# favorite_things = [["BMW","Audi","Toyota","Tata","Volkswagen"],
+                #    ["Egg roll","Paneer tikka","Egg chicken roll","Chicken satay","Chicken 65"],
+# ["H410M","i3 10105f","16GB","1TB","GT 710 ddr3"]]
 # print(favorite_things[0][0])
 # for collection in favorite_things :
 #     print (collection)
-for collections in favorite_things:
-    for items in collections:
+# for collections in favorite_things:
+    # for items in collections:
+        # print(items,end = " ")
+    # print()
+
+#num pad
+num_pad = [(1,2,3),(4,5,6),(7,8,9),("*",0,"#")]
+for rows in num_pad:
+    for items in rows:
         print(items,end = " ")
     print()
