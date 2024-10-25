@@ -134,8 +134,12 @@
     # print()
 
 #num pad
-num_pad = [(1,2,3),(4,5,6),(7,8,9),("*",0,"#")]
-for rows in num_pad:
-    for items in rows:
-        print(items,end = " ")
-    print()
+# num_pad = [(1,2,3),(4,5,6),(7,8,9),("*",0,"#")]
+# for rows in num_pad:
+#     for items in rows:
+#         print(items,end = " ")
+#     print()
+
+#Dictionaries
+student = {"Ram":"marks-95","Sham":"marks- 54","Jodu":"marks-34","yash":"marks-100"}
+print(student.get("Jodu"))
