@@ -142,4 +142,6 @@
 
 #Dictionaries
 student = {"Ram":"marks-95","Sham":"marks- 54","Jodu":"marks-34","yash":"marks-100"}
-print(student.get("Jodu"))
+# print(student.get("Jodu"))
+student.update({"ayesha":"marks-99"})
+print(student.get("ayesha"))
