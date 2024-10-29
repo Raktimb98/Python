@@ -149,7 +149,9 @@
 #Random module
 import random
 # print(help(random))
-low = 1
-high = 1000
-number = random.randint(low ,high)
-print(number)
+# low = 1
+# high = 1000
+# number = random.randint(low ,high)
+options = ("Rock" , "Paper" , "Scissor")
+option = random.choice(options)
+print(option)
