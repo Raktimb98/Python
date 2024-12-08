@@ -157,8 +157,12 @@
 # print(option)
 
 # Functions
-def doIt():
-    print("do it")
-    print("Just do it")
-    print("You have to do it")
-doIt()
+# def doIt():
+#     print("do it")
+#     print("Just do it")
+#     print("You have to do it")
+# doIt()
+def hello(name):
+    # "name" is a parameter here
+    print(f"Hello {name}")
+hello("Raktim")
