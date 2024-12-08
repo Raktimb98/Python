@@ -168,7 +168,15 @@
 # hello("Raktim")
 
 # Return statement
-def add(x,y):
-    ans = x+y
-    return ans
-print(add(5,6))
+# def add(x,y):
+#     ans = x+y
+#     return ans
+# print(add(5,6))
+
+# Function to create fullname
+def create_name(first,last):
+    first = first.capitalize()
+    last = last.capitalize()
+    return first + " " + last
+full_name =create_name("raktim" , "biswas")
+print(full_name)
