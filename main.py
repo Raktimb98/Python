@@ -162,7 +162,13 @@
 #     print("Just do it")
 #     print("You have to do it")
 # doIt()
-def hello(name):
-    # "name" is a parameter here
-    print(f"Hello {name}")
-hello("Raktim")
+# def hello(name):
+#     # "name" is a parameter here
+#     print(f"Hello {name}")
+# hello("Raktim")
+
+# Return statement
+def add(x,y):
+    ans = x+y
+    return ans
+print(add(5,6))
