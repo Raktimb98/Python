@@ -182,6 +182,15 @@
 # print(full_name)
 
 # Default arguments
-def net_price(item_price,discount= 0,tax=0.05):
-    return item_price * (1-discount) * (1+tax)
-print(net_price(500,0.1,0))
+# def net_price(item_price,discount= 0,tax=0.05):
+#     return item_price * (1-discount) * (1+tax)
+# print(net_price(500,0.1,0))
+
+# Timer program using default
+import time
+def count(end,start=0):
+    for x in range(start,end+1):
+        print(x)
+        time.sleep(1)
+    print("Done!")
+count(10)
