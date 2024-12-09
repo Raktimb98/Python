@@ -174,9 +174,14 @@
 # print(add(5,6))
 
 # Function to create fullname
-def create_name(first,last):
-    first = first.capitalize()
-    last = last.capitalize()
-    return first + " " + last
-full_name =create_name("raktim" , "biswas")
-print(full_name)
+# def create_name(first,last):
+#     first = first.capitalize()
+#     last = last.capitalize()
+#     return first + " " + last
+# full_name =create_name("raktim" , "biswas")
+# print(full_name)
+
+# Default arguments
+def net_price(item_price,discount= 0,tax=0.05):
+    return item_price * (1-discount) * (1+tax)
+print(net_price(500,0.1,0))
