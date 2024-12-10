@@ -196,6 +196,11 @@
 # count(10)
 
 # Keyword
-def hello(greeting,title,first,last):
-    print(f"{greeting} {title} {first} {last}")
-hello(greeting="Hello",first="Raktim",last="Biswas",title="Mr.")
+# def hello(greeting,title,first,last):
+#     print(f"{greeting} {title} {first} {last}")
+# hello(greeting="Hello",first="Raktim",last="Biswas",title="Mr.")
+# Get Phone number
+def get_phone(country,area,first,last):
+    return f"{country}-{area}-{first}-{last}"
+phone_number = get_phone(country=91,area=123,first=456,last=7890)
+print(phone_number)
