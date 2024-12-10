@@ -187,10 +187,15 @@
 # print(net_price(500,0.1,0))
 
 # Timer program using default
-import time
-def count(end,start=0):
-    for x in range(start,end+1):
-        print(x)
-        time.sleep(1)
-    print("Done!")
-count(10)
+# import time
+# def count(end,start=0):
+#     for x in range(start,end+1):
+#         print(x)
+#         time.sleep(1)
+#     print("Done!")
+# count(10)
+
+# Keyword
+def hello(greeting,title,first,last):
+    print(f"{greeting} {title} {first} {last}")
+hello(greeting="Hello",first="Raktim",last="Biswas",title="Mr.")
