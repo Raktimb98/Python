@@ -200,7 +200,15 @@
 #     print(f"{greeting} {title} {first} {last}")
 # hello(greeting="Hello",first="Raktim",last="Biswas",title="Mr.")
 # Get Phone number
-def get_phone(country,area,first,last):
-    return f"{country}-{area}-{first}-{last}"
-phone_number = get_phone(country=91,area=123,first=456,last=7890)
-print(phone_number)
+# def get_phone(country,area,first,last):
+#     return f"{country}-{area}-{first}-{last}"
+# phone_number = get_phone(country=91,area=123,first=456,last=7890)
+# print(phone_number)
+
+# Arbitrary
+def add(*nums):
+    total = 0
+    for arg in nums:
+        total +=arg
+    return total
+print(add(1,2,3))
