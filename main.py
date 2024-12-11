@@ -206,9 +206,14 @@
 # print(phone_number)
 
 # Arbitrary
-def add(*nums):
-    total = 0
-    for arg in nums:
-        total +=arg
-    return total
-print(add(1,2,3))
+# def add(*nums):
+#     total = 0
+#     for arg in nums:
+#         total +=arg
+#     return total
+# print(add(1,2,3))
+# Another example
+def display_name(*args):
+    for arg in args:
+        print(arg,end=" ")
+display_name("Mr.","Raktim ","Biswas")
