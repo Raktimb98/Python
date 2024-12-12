@@ -213,7 +213,15 @@
 #     return total
 # print(add(1,2,3))
 # Another example
-def display_name(*args):
-    for arg in args:
-        print(arg,end=" ")
-display_name("Mr.","Raktim ","Biswas")
+# def display_name(*args):
+#     for arg in args:
+#         print(arg,end=" ")
+# display_name("Mr.","Raktim ","Biswas")
+# Kwargs
+def print_address(**kwargs):
+    # for value in kwargs.values():
+    # for key in kwargs.keys():
+    #     print(key)
+    for key,value in kwargs.items():
+        print(f"{key}: {value}")
+print_address(street="asdf123",city="Jaipur",state="New Delhi",pin=6541521)
