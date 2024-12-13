@@ -218,10 +218,20 @@
 #         print(arg,end=" ")
 # display_name("Mr.","Raktim ","Biswas")
 # Kwargs
-def print_address(**kwargs):
+# def print_address(**kwargs):
+#     # for value in kwargs.values():
+#     # for key in kwargs.keys():
+#     #     print(key)
+#     for key,value in kwargs.items():
+#         print(f"{key}: {value}")
+# print_address(street="asdf123",city="Jaipur",state="New Delhi",pin=6541521)
+
+# Using args and kwargs together
+def shipping_label(*args,**kwargs):
+    for arg in args:
+        print(arg,end=" ")
+    print()
     # for value in kwargs.values():
-    # for key in kwargs.keys():
-    #     print(key)
-    for key,value in kwargs.items():
-        print(f"{key}: {value}")
-print_address(street="asdf123",city="Jaipur",state="New Delhi",pin=6541521)
+    #     print(value, end=" ")
+    print(f"{kwargs.get('apt')} {kwargs.get('state')}")
+shipping_label("Mr.","Raktim","Biswas" ,apt="45",state="gtx store")
