@@ -227,11 +227,28 @@
 # print_address(street="asdf123",city="Jaipur",state="New Delhi",pin=6541521)
 
 # Using args and kwargs together
-def shipping_label(*args,**kwargs):
-    for arg in args:
-        print(arg,end=" ")
-    print()
-    # for value in kwargs.values():
-    #     print(value, end=" ")
-    print(f"{kwargs.get('apt')} {kwargs.get('state')}")
-shipping_label("Mr.","Raktim","Biswas" ,apt="45",state="gtx store")
+# def shipping_label(*args,**kwargs):
+#     for arg in args:
+#         print(arg,end=" ")
+#     print()
+#     # for value in kwargs.values():
+#     #     print(value, end=" ")
+#     print(f"{kwargs.get('apt')} {kwargs.get('state')}")
+# shipping_label("Mr.","Raktim","Biswas" ,apt="45",state="gtx store")
+
+# Iterables
+# numbers = [1,2,3,4,5] #this is list
+# numbers = (1,2,3,4,5) #this is tuple
+# for number in numbers:
+#     print(number, end=" ")
+
+# foods = {"Chicken satay","Butter nun","panner tikka masala"}
+# for items in foods:
+#     print(items)
+
+options = {"A":1,"B":2,"C":3}
+# for key in options:
+# for values in options.values():
+for key,values in options.items():
+    # print(key,values , end=" ")
+    print(f"{key} : {values}")
