@@ -246,9 +246,17 @@
 # for items in foods:
 #     print(items)
 
-options = {"A":1,"B":2,"C":3}
-# for key in options:
-# for values in options.values():
-for key,values in options.items():
-    # print(key,values , end=" ")
-    print(f"{key} : {values}")
+# options = {"A":1,"B":2,"C":3}
+# # for key in options:
+# # for values in options.values():
+# for key,values in options.items():
+#     # print(key,values , end=" ")
+#     print(f"{key} : {values}")
+
+# Membership operators
+students = {"Adam","Eve","Martha","Katherina"}
+student = input("Enter the student name that you want to eliminate: ")
+if student in students:
+    print(f"{student} is eliminated!")
+else:
+    print(f"{student} was not found in the list.")
