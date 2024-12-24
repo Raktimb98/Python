@@ -254,9 +254,18 @@
 #     print(f"{key} : {values}")
 
 # Membership operators
-students = {"Adam","Eve","Martha","Katherina"}
-student = input("Enter the student name that you want to eliminate: ")
-if student in students:
-    print(f"{student} is eliminated!")
-else:
-    print(f"{student} was not found in the list.")
+# students = {"Adam","Eve","Martha","Katherina"}
+# student = input("Enter the student name that you want to eliminate: ")
+# if student in students:
+#     print(f"{student} is eliminated!")
+# else:
+#     print(f"{student} was not found in the list.")
+
+# List comprehension
+# doubles = []
+# for n in range(1,11):
+#     doubles.append(n*2)
+# print(doubles)
+
+doubles =[value*2 for value in range(1,11)]
+print(doubles)
