@@ -267,5 +267,26 @@
 #     doubles.append(n*2)
 # print(doubles)
 
-doubles =[value*2 for value in range(1,11)]
-print(doubles)
+# doubles =[value*2 for value in range(1,11)]
+# print(doubles)
+
+# Match-case statement (switch case)
+def day_of_week(day):
+    if day ==1:
+        return "It's sunday"
+    elif day ==2:
+        return "It's monday"
+    elif day ==3:
+        return "It's tuesday"
+    elif day ==4:
+        return "It's wednesday"
+    elif day ==5:
+        return "It's thursday"
+    elif day ==6:
+        return "It's friday"
+    elif day ==7:
+        return "It's saturday"
+    else:
+        return "Invalid day"
+
+print(day_of_week(1))
