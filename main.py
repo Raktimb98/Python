@@ -271,22 +271,44 @@
 # print(doubles)
 
 # Match-case statement (switch case)
-def day_of_week(day):
-    if day ==1:
-        return "It's sunday"
-    elif day ==2:
-        return "It's monday"
-    elif day ==3:
-        return "It's tuesday"
-    elif day ==4:
-        return "It's wednesday"
-    elif day ==5:
-        return "It's thursday"
-    elif day ==6:
-        return "It's friday"
-    elif day ==7:
-        return "It's saturday"
-    else:
-        return "Invalid day"
+# def day_of_week(day):
+#     if day ==1:
+#         return "It's sunday"
+#     elif day ==2:
+#         return "It's monday"
+#     elif day ==3:
+#         return "It's tuesday"
+#     elif day ==4:
+#         return "It's wednesday"
+#     elif day ==5:
+#         return "It's thursday"
+#     elif day ==6:
+#         return "It's friday"
+#     elif day ==7:
+#         return "It's saturday"
+#     else:
+#         return "Invalid day"
 
+# print(day_of_week(1))
+
+# It's the actual implementation of switch case(down below)
+def day_of_week(day):
+    match day:
+        case 1:
+            return "It's sunday"
+        case 2:
+            return "It's monday"
+        case 3:
+            return "It's tuesday"
+        case 4:
+            return "It's wednesday"
+        case 5:
+            return "It's thursday"
+        case 6:
+            return "It's friday"
+        case 7:
+            return "It's saturday"
+        case _:
+            return "Invalid day"
+        
 print(day_of_week(1))
