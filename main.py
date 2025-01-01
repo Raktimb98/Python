@@ -292,23 +292,33 @@
 # print(day_of_week(1))
 
 # It's the actual implementation of switch case(down below)
-def day_of_week(day):
-    match day:
-        case 1:
-            return "It's sunday"
-        case 2:
-            return "It's monday"
-        case 3:
-            return "It's tuesday"
-        case 4:
-            return "It's wednesday"
-        case 5:
-            return "It's thursday"
-        case 6:
-            return "It's friday"
-        case 7:
-            return "It's saturday"
-        case _:
-            return "Invalid day"
+# def day_of_week(day):
+#     match day:
+#         case 1:
+#             return "It's sunday"
+#         case 2:
+#             return "It's monday"
+#         case 3:
+#             return "It's tuesday"
+#         case 4:
+#             return "It's wednesday"
+#         case 5:
+#             return "It's thursday"
+#         case 6:
+#             return "It's friday"
+#         case 7:
+#             return "It's saturday"
+#         case _:
+#             return "Invalid day"
         
-print(day_of_week(1))
+# print(day_of_week(1))
+
+# Module
+# help("modules")
+# import math
+# print(math.pi)
+# import math as m
+# print(m.pi)
+# the 'pi' is from the math module
+from math import pi
+print(pi)
