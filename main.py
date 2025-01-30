@@ -320,5 +320,38 @@
 # import math as m
 # print(m.pi)
 # the 'pi' is from the math module
+#from math import pi
+#print(pi)
+
+#Scope resolution
+#(LEGB) Local -> Enclosed -> Global -> Built in
+
+# Example of Local scope
+def func1():
+    x = 1 #local
+    print(x)
+
+def func2():
+    x = 2 #local
+    print(x)
+
+func1()
+func2()
+# Example of Enclosed scope
+def outer():
+    x = 1 #enclosed
+    def inner():
+        print(x)
+    inner()
+
+# Example of Global scope
+x = 1 #global
+def func():
+    print(x)
+func()
+
+# Example of Built in scope
 from math import pi
-print(pi)
+def func():
+    print(pi)
+func()
