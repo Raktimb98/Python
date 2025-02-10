@@ -327,31 +327,51 @@
 #(LEGB) Local -> Enclosed -> Global -> Built in
 
 # Example of Local scope
-def func1():
-    x = 1 #local
-    print(x)
+# def func1():
+#     x = 1 #local
+#     print(x)
 
-def func2():
-    x = 2 #local
-    print(x)
+# def func2():
+#     x = 2 #local
+#     print(x)
 
-func1()
-func2()
-# Example of Enclosed scope
-def outer():
-    x = 1 #enclosed
-    def inner():
-        print(x)
-    inner()
+# func1()
+# func2()
+# # Example of Enclosed scope
+# def outer():
+#     x = 1 #enclosed
+#     def inner():
+#         print(x)
+#     inner()
 
-# Example of Global scope
-x = 1 #global
-def func():
-    print(x)
-func()
+# # Example of Global scope
+# x = 1 #global
+# def func():
+#     print(x)
+# func()
 
-# Example of Built in scope
-from math import pi
-def func():
-    print(pi)
-func()
+# # Example of Built in scope
+# from math import pi
+# def func():
+#     print(pi)
+# func()
+
+# if __name__ == "__main__":(This is used to run the code only when the file is run directly)
+
+# def main():
+#     print("Hello world")
+# if __name__ == "__main__":
+#     main()
+
+# from __name__ import *
+# print(__name__)
+
+def favorite_food(food):
+    print(f"Your favorite food is {food}")
+
+def main():
+    print("This is main page")
+    favorite_food("Chicken Satay")
+
+if __name__ == "__main__":
+    main()
