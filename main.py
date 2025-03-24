@@ -365,13 +365,13 @@
 
 # from __name__ import *
 # print(__name__)
+# # Another part of the code
+# def favorite_food(food):
+#     print(f"Your favorite food is {food}")
 
-def favorite_food(food):
-    print(f"Your favorite food is {food}")
+# def main():
+#     print("This is main page")
+#     favorite_food("Chicken Satay")
 
-def main():
-    print("This is main page")
-    favorite_food("Chicken Satay")
-
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
