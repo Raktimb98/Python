@@ -375,3 +375,24 @@
 
 # if __name__ == "__main__":
 #     main()
+
+
+# Date and time
+import datetime
+date = datetime.date(2025,8,18)
+today = datetime.date.today()
+now = datetime.datetime.now()
+now = now.strftime("%H:%M:%S %d/%m/%Y")
+print(now)
+print(today)
+print(date)
+
+target_datetime = datetime.datetime(2025,8,18,12,0,0)
+current_datetime = datetime.datetime.now()
+
+if current_datetime > target_datetime:
+    print("Target date has passed")
+elif current_datetime < target_datetime:
+    print("Target date is yet to come")
+else:
+    print("Target date is today")
