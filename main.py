@@ -22,7 +22,7 @@
 # print(f"Happy Birthday {name}")
 # print(f"Your turned {age} Today!")
 
-#if else
+#* if else
 # age =int(input("Enter your age:"))
 # if age >= 18:
 #     print("Your are an adult")
@@ -31,18 +31,18 @@
 # else:
 #     print("You are not an adult!")
 
-#conditional expressions
+#* conditional expressions
 # num = 981
 # print("Your have more time to explore the world"if num <100 else "You have to die")
 
-#Indexing
+#* Indexing
 # debit_number = "5649-6546-6556-5454"
 # print(debit_number)
 # print(debit_number[0:4])
 # print(debit_number[:4])
 # print(debit_number[0:])
 
-# Format Specifiers
+#* Format Specifiers
 # price1 = 3.14159
 # price2 = 2.355
 # price3 = 21212.674
@@ -50,28 +50,28 @@
 # print(f"Price2 is {price2:+010}")
 # print(f"Price3 is {price3:+,.2f}")
 
-# While loop
+#* While loop
 # name = input("Enter your name:")
 # while name =="":
 #     print("You didn't enter your name")
 #     name = input("Enter your name:")
 # print(f"Hello {name}")
 
-# Short program
+#* Short program
 # exercise = input ("Enter your favorite exercise name (Press q for quit):")
 # while not exercise == "q":
 #     print(f"Your favorite exercise is: {exercise}")
 #     exercise = input("Enter your another favorite exercise name: (Press q for quit):")
 # print ("See you again boi !")
 
-#Another one
+#* Another one
 # num = int(input("Enter a number between 1 to 10:"))
 # while num < 1 or num > 10:
 #     print(f"{num} is invalid")
 #     num = int(input("Enter a number between 1 to 10:"))
 # print (f"Your number is: {num}")
 
-#For loops
+#* For loops
 # for n in range(0,11):
 #     print(n)
 # print("Hello youth")
@@ -83,13 +83,13 @@
 # for x in customer_id:
 #     print(x)
 
-#Nested Loop
+#* Nested Loop
 # for x in range(3):
 #     for y in range(1,10):
 #         print(y,end=" ")
 #     print()
 
-#collection, list , sets and tuples
+#* collection, list , sets and tuples
 # fruit = "Mango"
 # fruit_list = ["Apple","Banana","Cherry"]
 # print(fruit)
@@ -102,14 +102,14 @@
 # for fruits in fruit_list:
 #     print(fruits)
 
-#set
+#* set
 # car = {"Tata","Mahindra","Toyota","Volkswagen","BMW"}
 # print(dir(car))
 # print(car.add("Honda"))
 # print(car.remove("BMW"))
 # print(car)
 
-#Tuples
+#* Tuples
 # my_tuple = ("1","2","3","3","3","4","5")
 # print(my_tuple[0])
 # print(my_tuple.count("3"))
@@ -117,7 +117,7 @@
 # for items in my_tuple:
 #     print(items)
 
-# 2D array
+#* 2D array
 # car_list = ["BMW","Audi","Toyota","Tata","Volkswagen"]
 # food_list = ["Egg roll","Paneer tikka","Egg chicken roll","Chicken satay","Chicken 65"]
 # computer_specification = ["H410M","i3 10105f","16GB","1TB","GT 710 ddr3"]
@@ -128,25 +128,25 @@
 # print(favorite_things[0][0])
 # for collection in favorite_things :
 #     print (collection)
-# for collections in favorite_things:
+#* for collections in favorite_things:
     # for items in collections:
         # print(items,end = " ")
     # print()
 
-#num pad
+#* num pad
 # num_pad = [(1,2,3),(4,5,6),(7,8,9),("*",0,"#")]
 # for rows in num_pad:
 #     for items in rows:
 #         print(items,end = " ")
 #     print()
 
-#Dictionaries
+#* Dictionaries
 # student = {"Ram":"marks-95","Sham":"marks- 54","Jodu":"marks-34","yash":"marks-100"}
 # print(student.get("Jodu"))
 # student.update({"ayesha":"marks-99"})
 # print(student.get("ayesha"))
 
-#Random module
+#* Random module
 # import random
 # # print(help(random))
 # # low = 1
@@ -156,7 +156,7 @@
 # option = random.choice(options)
 # print(option)
 
-# Functions
+#* Functions
 # def doIt():
 #     print("do it")
 #     print("Just do it")
@@ -167,13 +167,13 @@
 #     print(f"Hello {name}")
 # hello("Raktim")
 
-# Return statement
+#* Return statement
 # def add(x,y):
 #     ans = x+y
 #     return ans
 # print(add(5,6))
 
-# Function to create fullname
+#* Function to create fullname
 # def create_name(first,last):
 #     first = first.capitalize()
 #     last = last.capitalize()
@@ -181,12 +181,12 @@
 # full_name =create_name("raktim" , "biswas")
 # print(full_name)
 
-# Default arguments
+#* Default arguments
 # def net_price(item_price,discount= 0,tax=0.05):
 #     return item_price * (1-discount) * (1+tax)
 # print(net_price(500,0.1,0))
 
-# Timer program using default
+#* Timer program using default
 # import time
 # def count(end,start=0):
 #     for x in range(start,end+1):
@@ -195,7 +195,7 @@
 #     print("Done!")
 # count(10)
 
-# Keyword
+#* Keyword
 # def hello(greeting,title,first,last):
 #     print(f"{greeting} {title} {first} {last}")
 # hello(greeting="Hello",first="Raktim",last="Biswas",title="Mr.")
@@ -205,7 +205,7 @@
 # phone_number = get_phone(country=91,area=123,first=456,last=7890)
 # print(phone_number)
 
-# Arbitrary
+#* Arbitrary
 # def add(*nums):
 #     total = 0
 #     for arg in nums:
@@ -217,7 +217,7 @@
 #     for arg in args:
 #         print(arg,end=" ")
 # display_name("Mr.","Raktim ","Biswas")
-# Kwargs
+#* Kwargs
 # def print_address(**kwargs):
 #     # for value in kwargs.values():
 #     # for key in kwargs.keys():
@@ -226,7 +226,7 @@
 #         print(f"{key}: {value}")
 # print_address(street="asdf123",city="Jaipur",state="New Delhi",pin=6541521)
 
-# Using args and kwargs together
+#* Using args and kwargs together
 # def shipping_label(*args,**kwargs):
 #     for arg in args:
 #         print(arg,end=" ")
@@ -236,7 +236,7 @@
 #     print(f"{kwargs.get('apt')} {kwargs.get('state')}")
 # shipping_label("Mr.","Raktim","Biswas" ,apt="45",state="gtx store")
 
-# Iterables
+#* Iterables
 # numbers = [1,2,3,4,5] #this is list
 # numbers = (1,2,3,4,5) #this is tuple
 # for number in numbers:
@@ -253,7 +253,7 @@
 #     # print(key,values , end=" ")
 #     print(f"{key} : {values}")
 
-# Membership operators
+#* Membership operators
 # students = {"Adam","Eve","Martha","Katherina"}
 # student = input("Enter the student name that you want to eliminate: ")
 # if student in students:
@@ -261,7 +261,7 @@
 # else:
 #     print(f"{student} was not found in the list.")
 
-# List comprehension
+#* List comprehension
 # doubles = []
 # for n in range(1,11):
 #     doubles.append(n*2)
@@ -270,7 +270,7 @@
 # doubles =[value*2 for value in range(1,11)]
 # print(doubles)
 
-# Match-case statement (switch case)
+#* Match-case statement (switch case)
 # def day_of_week(day):
 #     if day ==1:
 #         return "It's sunday"
@@ -291,7 +291,7 @@
 
 # print(day_of_week(1))
 
-# It's the actual implementation of switch case(down below)
+#* It's the actual implementation of switch case(down below)
 # def day_of_week(day):
 #     match day:
 #         case 1:
@@ -313,7 +313,7 @@
         
 # print(day_of_week(1))
 
-# Module
+#* Module
 # help("modules")
 # import math
 # print(math.pi)
@@ -323,10 +323,10 @@
 #from math import pi
 #print(pi)
 
-#Scope resolution
-#(LEGB) Local -> Enclosed -> Global -> Built in
+#* Scope resolution
+#* (LEGB) Local -> Enclosed -> Global -> Built in
 
-# Example of Local scope
+#* Example of Local scope
 # def func1():
 #     x = 1 #local
 #     print(x)
@@ -350,7 +350,7 @@
 #     print(x)
 # func()
 
-# # Example of Built in scope
+#* Example of Built in scope
 # from math import pi
 # def func():
 #     print(pi)
@@ -377,22 +377,54 @@
 #     main()
 
 
-# Date and time
-import datetime
-date = datetime.date(2025,8,18)
-today = datetime.date.today()
-now = datetime.datetime.now()
-now = now.strftime("%H:%M:%S %d/%m/%Y")
-print(now)
-print(today)
-print(date)
+#* Date and time
+# import datetime
+# date = datetime.date(2025,8,18)
+# today = datetime.date.today()
+# now = datetime.datetime.now()
+# now = now.strftime("%H:%M:%S %d/%m/%Y")
+# print(now)
+# print(today)
+# print(date)
 
-target_datetime = datetime.datetime(2025,8,18,12,0,0)
-current_datetime = datetime.datetime.now()
+# target_datetime = datetime.datetime(2025,8,18,12,0,0)
+# current_datetime = datetime.datetime.now()
 
-if current_datetime > target_datetime:
-    print("Target date has passed")
-elif current_datetime < target_datetime:
-    print("Target date is yet to come")
-else:
-    print("Target date is today")
+# if current_datetime > target_datetime:
+#     print("Target date has passed")
+# elif current_datetime < target_datetime:
+#     print("Target date is yet to come")
+# else:
+#     print("Target date is today")
+
+#* Multithreading
+
+import threading
+import time
+
+def walk_dog(name):
+    time.sleep(8)
+    print(f"You are walking the {name}")
+
+def take_out_trash():
+    time.sleep(2)
+    print("You are taking out the trash")
+
+def get_mail():
+    time.sleep(4)
+    print("You are getting the mail")
+
+chore1 = threading.Thread(target=walk_dog, args=("dog",))
+chore1.start()
+
+chore2 = threading.Thread(target=take_out_trash)
+chore2.start()
+
+chore3 = threading.Thread(target=get_mail)
+chore3.start()
+
+chore1.join()
+chore2.join()
+chore3.join()
+
+print("All chores are done")
