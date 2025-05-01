@@ -399,32 +399,63 @@
 
 #* Multithreading
 
-import threading
-import time
+# import threading
+# import time
 
-def walk_dog(name):
-    time.sleep(8)
-    print(f"You are walking the {name}")
+# def walk_dog(name):
+#     time.sleep(8)
+#     print(f"You are walking the {name}")
 
-def take_out_trash():
-    time.sleep(2)
-    print("You are taking out the trash")
+# def take_out_trash():
+#     time.sleep(2)
+#     print("You are taking out the trash")
 
-def get_mail():
-    time.sleep(4)
-    print("You are getting the mail")
+# def get_mail():
+#     time.sleep(4)
+#     print("You are getting the mail")
 
-chore1 = threading.Thread(target=walk_dog, args=("dog",))
-chore1.start()
+# chore1 = threading.Thread(target=walk_dog, args=("dog",))
+# chore1.start()
 
-chore2 = threading.Thread(target=take_out_trash)
-chore2.start()
+# chore2 = threading.Thread(target=take_out_trash)
+# chore2.start()
 
-chore3 = threading.Thread(target=get_mail)
-chore3.start()
+# chore3 = threading.Thread(target=get_mail)
+# chore3.start()
 
-chore1.join()
-chore2.join()
-chore3.join()
+# chore1.join()
+# chore2.join()
+# chore3.join()
 
-print("All chores are done")
+# print("All chores are done")
+
+#* How to connect to an API
+
+import requests
+base_url = "https://pokeapi.co/api/v2"
+
+def get_pokemon_info(pokemon_name):
+    url = f"{base_url}/pokemon/{pokemon_name.lower()}"
+    response = requests.get(url)
+    
+    if response.status_code == 200:
+        data = response.json()
+        name = data['name']
+        height = data['height']
+        weight = data['weight']
+        types = [type_info['type']['name'] for type_info in data['types']]
+        
+        print(f"Name: {name.capitalize()}")
+        print(f"Height: {height}")
+        print(f"Weight: {weight}")
+        print(f"Types: {', '.join(types).capitalize()}")
+    elif response.status_code == 404:
+        print(f"Pokemon '{pokemon_name}' not found.")
+    elif response.status_code == 500:
+        print("Server error. Please try again later.")
+    else:
+        print(f"Failed to retrieve data for {pokemon_name}. Status code: {response.status_code}")
+        return
+
+pokemon_name = input("Enter the name of the Pokemon: ")
+get_pokemon_info(pokemon_name)
