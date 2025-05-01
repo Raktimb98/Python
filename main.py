@@ -431,31 +431,53 @@
 
 #* How to connect to an API
 
-import requests
-base_url = "https://pokeapi.co/api/v2"
+# import requests
+# base_url = "https://pokeapi.co/api/v2"
 
-def get_pokemon_info(pokemon_name):
-    url = f"{base_url}/pokemon/{pokemon_name.lower()}"
-    response = requests.get(url)
+# def get_pokemon_info(pokemon_name):
+#     url = f"{base_url}/pokemon/{pokemon_name.lower()}"
+#     response = requests.get(url)
     
-    if response.status_code == 200:
-        data = response.json()
-        name = data['name']
-        height = data['height']
-        weight = data['weight']
-        types = [type_info['type']['name'] for type_info in data['types']]
+#     if response.status_code == 200:
+#         data = response.json()
+#         name = data['name']
+#         height = data['height']
+#         weight = data['weight']
+#         types = [type_info['type']['name'] for type_info in data['types']]
         
-        print(f"Name: {name.capitalize()}")
-        print(f"Height: {height}")
-        print(f"Weight: {weight}")
-        print(f"Types: {', '.join(types).capitalize()}")
-    elif response.status_code == 404:
-        print(f"Pokemon '{pokemon_name}' not found.")
-    elif response.status_code == 500:
-        print("Server error. Please try again later.")
-    else:
-        print(f"Failed to retrieve data for {pokemon_name}. Status code: {response.status_code}")
-        return
+#         print(f"Name: {name.capitalize()}")
+#         print(f"Height: {height}")
+#         print(f"Weight: {weight}")
+#         print(f"Types: {', '.join(types).capitalize()}")
+#     elif response.status_code == 404:
+#         print(f"Pokemon '{pokemon_name}' not found.")
+#     elif response.status_code == 500:
+#         print("Server error. Please try again later.")
+#     else:
+#         print(f"Failed to retrieve data for {pokemon_name}. Status code: {response.status_code}")
+#         return
 
-pokemon_name = input("Enter the name of the Pokemon: ")
-get_pokemon_info(pokemon_name)
+# pokemon_name = input("Enter the name of the Pokemon: ")
+# get_pokemon_info(pokemon_name)
+
+#* PyQt5 introduction
+import sys
+from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QVBoxLayout, QWidget
+from PyQt5.QtGui import QIcon
+
+class MainWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        self.setWindowTitle("Python GUI")
+        # self.setGeometry(x,y,width,height)
+        self.setGeometry(500, 250, 500, 300)
+        self.setWindowIcon(QIcon("D:\Programming\Python\image.jpg"))
+
+def main():
+    app = QApplication(sys.argv)
+    window = MainWindow()
+    window.show()
+    sys.exit(app.exec_())
+
+if __name__ == "__main__":
+    main()
