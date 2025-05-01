@@ -463,7 +463,8 @@
 #* PyQt5 introduction
 import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QVBoxLayout, QWidget
-from PyQt5.QtGui import QIcon
+from PyQt5.QtGui import QIcon ,QFont
+from PyQt5.QtCore import Qt
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -472,6 +473,13 @@ class MainWindow(QMainWindow):
         # self.setGeometry(x,y,width,height)
         self.setGeometry(500, 250, 500, 300)
         self.setWindowIcon(QIcon("D:\Programming\Python\image.jpg"))
+
+        label = QLabel("Hello, from PyQt5!",self)
+        label.setFont(QFont("Arial", 20))
+        label.setStyleSheet("color: blue;" "background-color: yellow;")
+        label.setGeometry(50, 50, 400, 50)
+        label.setAlignment(Qt.AlignCenter)
+        # label.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
 
 def main():
     app = QApplication(sys.argv)
