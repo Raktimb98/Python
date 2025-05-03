@@ -463,7 +463,7 @@
 #* PyQt5 introduction
 import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QVBoxLayout, QWidget
-from PyQt5.QtGui import QIcon ,QFont
+from PyQt5.QtGui import QIcon ,QFont , QPixmap
 from PyQt5.QtCore import Qt
 
 class MainWindow(QMainWindow):
@@ -472,14 +472,21 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("Python GUI")
         # self.setGeometry(x,y,width,height)
         self.setGeometry(500, 250, 500, 300)
-        self.setWindowIcon(QIcon("D:\Programming\Python\image.jpg"))
+        self.setWindowIcon(QIcon("E:\Programming\Python\image.jpg"))
 
-        label = QLabel("Hello, from PyQt5!",self)
-        label.setFont(QFont("Arial", 20))
-        label.setStyleSheet("color: blue;" "background-color: yellow;")
-        label.setGeometry(50, 50, 400, 50)
-        label.setAlignment(Qt.AlignCenter)
+        # label = QLabel("Hello, from PyQt5!",self)
+        # label.setFont(QFont("Arial", 20))
+        # label.setStyleSheet("color: blue;" "background-color: yellow;")
+        # label.setGeometry(50, 50, 400, 50)
+        # label.setAlignment(Qt.AlignCenter)
         # label.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
+
+        # Adding an image
+        label = QLabel(self)
+        label.setGeometry(0, 0, 500, 300)
+        pixmap = QPixmap("E:\Programming\Python\image.jpg")
+        label.setPixmap(pixmap)
+        label.setScaledContents(True)
 
 def main():
     app = QApplication(sys.argv)
