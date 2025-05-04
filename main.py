@@ -461,36 +461,95 @@
 # get_pokemon_info(pokemon_name)
 
 #* PyQt5 introduction
+# import sys
+# from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QVBoxLayout, QWidget
+# from PyQt5.QtGui import QIcon ,QFont , QPixmap
+# from PyQt5.QtCore import Qt
+
+# class MainWindow(QMainWindow):
+#     def __init__(self):
+#         super().__init__()
+#         self.setWindowTitle("Python GUI")
+#         # self.setGeometry(x,y,width,height)
+#         self.setGeometry(500, 250, 500, 300)
+#         self.setWindowIcon(QIcon("E:\Programming\Python\image.jpg"))
+
+#         # label = QLabel("Hello, from PyQt5!",self)
+#         # label.setFont(QFont("Arial", 20))
+#         # label.setStyleSheet("color: blue;" "background-color: yellow;")
+#         # label.setGeometry(50, 50, 400, 50)
+#         # label.setAlignment(Qt.AlignCenter)
+#         # label.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
+
+#         # Adding an image
+#         label = QLabel(self)
+#         label.setGeometry(0, 0, 500, 300)
+#         pixmap = QPixmap("E:\Programming\Python\image.jpg")
+#         label.setPixmap(pixmap)
+#         label.setScaledContents(True)
+
+# def main():
+#     app = QApplication(sys.argv)
+#     window = MainWindow()
+#     window.show()
+#     sys.exit(app.exec_())
+
+# if __name__ == "__main__":
+#     main()
+
+#* PyQt5 layouts
 import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QVBoxLayout, QWidget
-from PyQt5.QtGui import QIcon ,QFont , QPixmap
-from PyQt5.QtCore import Qt
+from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QVBoxLayout, QWidget, QHBoxLayout,QGridLayout
 
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("Python GUI")
-        # self.setGeometry(x,y,width,height)
         self.setGeometry(500, 250, 500, 300)
-        self.setWindowIcon(QIcon("E:\Programming\Python\image.jpg"))
+        self.initUI()
 
-        # label = QLabel("Hello, from PyQt5!",self)
-        # label.setFont(QFont("Arial", 20))
-        # label.setStyleSheet("color: blue;" "background-color: yellow;")
-        # label.setGeometry(50, 50, 400, 50)
-        # label.setAlignment(Qt.AlignCenter)
-        # label.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
+    def initUI(self):
+        central_widget = QWidget()
+        self.setCentralWidget(central_widget)
+        label1 = QLabel("Label 1", self)
+        label2 = QLabel("Label 2", self)
+        label3 = QLabel("Label 3", self)
+        label4 = QLabel("Label 4", self)
+        label5 = QLabel("Label 5", self)
 
-        # Adding an image
-        label = QLabel(self)
-        label.setGeometry(0, 0, 500, 300)
-        pixmap = QPixmap("E:\Programming\Python\image.jpg")
-        label.setPixmap(pixmap)
-        label.setScaledContents(True)
+        label1.setStyleSheet("background-color: red;")
+        label2.setStyleSheet("background-color: green;")
+        label3.setStyleSheet("background-color: blue;")
+        label4.setStyleSheet("background-color: yellow;")
+        label5.setStyleSheet("background-color: orange;")
+
+        # vbox = QVBoxLayout()
+        # vbox.addWidget(label1)
+        # vbox.addWidget(label2)
+        # vbox.addWidget(label3)
+        # vbox.addWidget(label4)
+        # vbox.addWidget(label5)
+        # central_widget.setLayout(vbox)
+
+        # hbox = QHBoxLayout()
+        # hbox.addWidget(label1)
+        # hbox.addWidget(label2)
+        # hbox.addWidget(label3)
+        # hbox.addWidget(label4)
+        # hbox.addWidget(label5)
+        # central_widget.setLayout(hbox)
+
+        grid = QGridLayout()
+        grid.addWidget(label1, 0, 0)
+        grid.addWidget(label2, 0, 1)
+        grid.addWidget(label3, 1, 0)
+        grid.addWidget(label4, 1, 1)
+        grid.addWidget(label5, 2, 0, 1, 2)
+        central_widget.setLayout(grid)
 
 def main():
     app = QApplication(sys.argv)
     window = MainWindow()
+    window.setWindowTitle("Python GUI")
     window.show()
     sys.exit(app.exec_())
 
