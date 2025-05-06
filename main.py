@@ -557,29 +557,58 @@
 #     main()
 
 #* PyQt5 Buttons
+# import sys
+# from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton, QLabel
+
+# class MainWindow(QMainWindow):
+#     def __init__(self):
+#         super().__init__()
+#         self.setGeometry(500, 250, 500, 300)
+#         self.button = QPushButton("Click Me", self)
+#         self.InitUI()
+
+#     def InitUI(self):
+#         self.button.setGeometry(50, 50, 100, 30)
+#         self.button.setStyleSheet("background-color: green; color: white; font-size: 16px;")
+#         self.button.clicked.connect(self.on_click)
+
+#     def on_click(self):
+#         print   ("Button clicked")
+#         self.button.setText("Clicked")
+#         self.button.setDisabled(True)
+# if __name__ == "__main__":
+#     app = QApplication(sys.argv) 
+#     window = MainWindow()
+#     window.setWindowTitle("Python GUI")
+#     window.show()
+#     sys.exit(app.exec_())
+
+#* PyQt5 Checkbox
 import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton, QLabel
+from PyQt5.QtWidgets import QApplication,QMainWindow,QCheckBox
+from PyQt5.QtCore import Qt
 
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setGeometry(500, 250, 500, 300)
-        self.button = QPushButton("Click Me", self)
-        self.InitUI()
+        self.setGeometry(500, 250,500,300)
+        self.checkbox = QCheckBox("Check me",self)
+        self.initUI()
 
-    def InitUI(self):
-        self.button.setGeometry(50, 50, 100, 30)
-        self.button.setStyleSheet("background-color: green; color: white; font-size: 16px;")
-        self.button.clicked.connect(self.on_click)
+    def initUI(self):
+        self.checkbox.setStyleSheet("font-size: 20px;" "font-family: Poppins;")
+        self.checkbox.setGeometry(50,50,200,30)
+        # self.checkbox.setChecked(True) # Check the checkbox by default
+        self.checkbox.stateChanged.connect(self.checkbox_changed)
+    def checkbox_changed(self,state):
+        if state == Qt.Checked:
+            print("Checkbox is checked")
+        else:
+            print("Checkbox is unchecked")
 
-    def on_click(self):
-        print   ("Button clicked")
-        self.button.setText("Clicked")
-        self.button.setDisabled(True)
 if __name__ == "__main__":
-    app = QApplication(sys.argv) 
+    app = QApplication(sys.argv)
     window = MainWindow()
     window.setWindowTitle("Python GUI")
     window.show()
     sys.exit(app.exec_())
-
