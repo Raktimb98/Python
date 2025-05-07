@@ -584,31 +584,86 @@
 #     sys.exit(app.exec_())
 
 #* PyQt5 Checkbox
+# import sys
+# from PyQt5.QtWidgets import QApplication,QMainWindow,QCheckBox
+# from PyQt5.QtCore import Qt
+
+# class MainWindow(QMainWindow):
+#     def __init__(self):
+#         super().__init__()
+#         self.setGeometry(500, 250,500,300)
+#         self.checkbox = QCheckBox("Check me",self)
+#         self.initUI()
+
+#     def initUI(self):
+#         self.checkbox.setStyleSheet("font-size: 20px;" "font-family: Poppins;")
+#         self.checkbox.setGeometry(50,50,200,30)
+#         # self.checkbox.setChecked(True) # Check the checkbox by default
+#         self.checkbox.stateChanged.connect(self.checkbox_changed)
+#     def checkbox_changed(self,state):
+#         if state == Qt.Checked:
+#             print("Checkbox is checked")
+#         else:
+#             print("Checkbox is unchecked")
+
+# if __name__ == "__main__":
+#     app = QApplication(sys.argv)
+#     window = MainWindow()
+#     window.setWindowTitle("Python GUI")
+#     window.show()
+#     sys.exit(app.exec_())
 import sys
-from PyQt5.QtWidgets import QApplication,QMainWindow,QCheckBox
-from PyQt5.QtCore import Qt
+from PyQt5.QtWidgets import QApplication, QMainWindow, QRadioButton, QButtonGroup, QLabel
 
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setGeometry(500, 250,500,300)
-        self.checkbox = QCheckBox("Check me",self)
+        self.setGeometry(500, 250, 500, 300)
+        self.setWindowTitle("Python GUI")
+
+        self.radio1 = QRadioButton("Rupay", self)
+        self.radio2 = QRadioButton("Visa", self)
+        self.radio3 = QRadioButton("Mastercard", self)
+        self.radio4 = QRadioButton("Cash", self)
+        self.radio5 = QRadioButton("Cheque", self)
+
+        self.button_group_1 = QButtonGroup(self)
+        self.button_group_2 = QButtonGroup(self)
+
+        self.label = QLabel("", self)
+        self.label.setGeometry(50, 200, 400, 40)
+
         self.initUI()
 
     def initUI(self):
-        self.checkbox.setStyleSheet("font-size: 20px;" "font-family: Poppins;")
-        self.checkbox.setGeometry(50,50,200,30)
-        # self.checkbox.setChecked(True) # Check the checkbox by default
-        self.checkbox.stateChanged.connect(self.checkbox_changed)
-    def checkbox_changed(self,state):
-        if state == Qt.Checked:
-            print("Checkbox is checked")
-        else:
-            print("Checkbox is unchecked")
+        self.radio1.setGeometry(50, 50, 150, 30)
+        self.radio2.setGeometry(50, 80, 150, 30)
+        self.radio3.setGeometry(50, 110, 150, 30)
+        self.radio4.setGeometry(50, 140, 150, 30)
+        self.radio5.setGeometry(50, 170, 150, 30)
+
+        self.setStyleSheet("font-size: 20px; font-family: Poppins;")
+
+        self.button_group_1.addButton(self.radio1)
+        self.button_group_1.addButton(self.radio2)
+        self.button_group_1.addButton(self.radio3)
+
+        self.button_group_2.addButton(self.radio4)
+        self.button_group_2.addButton(self.radio5)
+
+        # Connect radio buttons to the handler
+        for btn in self.button_group_1.buttons():
+            btn.toggled.connect(self.radio_changed)
+        for btn in self.button_group_2.buttons():
+            btn.toggled.connect(self.radio_changed)
+
+    def radio_changed(self):
+        selected_1 = next((btn.text() for btn in self.button_group_1.buttons() if btn.isChecked()), None)
+        selected_2 = next((btn.text() for btn in self.button_group_2.buttons() if btn.isChecked()), None)
+        self.label.setText(f"Group 1: {selected_1 or 'None'} | Group 2: {selected_2 or 'None'}")
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = MainWindow()
-    window.setWindowTitle("Python GUI")
     window.show()
     sys.exit(app.exec_())
