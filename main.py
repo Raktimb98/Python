@@ -671,33 +671,104 @@
 #     sys.exit(app.exec_())
 
 #* PyQt5 Line edit
-import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow, QLineEdit ,QPushButton
+# import sys
+# from PyQt5.QtWidgets import QApplication, QMainWindow, QLineEdit ,QPushButton
 
-class MainWindow(QMainWindow):
+# class MainWindow(QMainWindow):
+#     def __init__(self):
+#         super().__init__()
+#         self.setGeometry(500, 250, 500, 300)
+#         self.line_edit = QLineEdit(self)
+#         self.button = QPushButton("Submit", self)
+#         self.initUI()
+
+#     def initUI(self):
+#         self.line_edit.setGeometry(50, 50, 200, 30)
+#         self.button.setGeometry(50, 100, 100, 30)
+#         self.line_edit.setPlaceholderText("Enter your name")
+#         self.line_edit.setStyleSheet("font-size: 20px; font-family: Poppins;")
+#         self.button.setStyleSheet("font-size: 20px; font-family: Poppins;")
+#         self.line_edit.setMaxLength(10)
+#         self.button.clicked.connect(self.submit)
+
+#     def submit(self):
+#         text = self.line_edit.text()
+#         print(f"Submitted text: {text}")
+
+# if __name__ == "__main__":
+#     app = QApplication(sys.argv)
+#     window = MainWindow()
+#     window.setWindowTitle("Python GUI")
+#     window.show()
+#     sys.exit(app.exec_())
+
+#* PyQt5 CSS Styles
+import sys
+from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton, QVBoxLayout, QWidget
+
+class ColorfulButtonsApp(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setGeometry(500, 250, 500, 300)
-        self.line_edit = QLineEdit(self)
-        self.button = QPushButton("Submit", self)
-        self.initUI()
+        self.setWindowTitle("Three Colorful Buttons with Hover Effects")
+        central_widget = QWidget()
+        self.setCentralWidget(central_widget)
 
-    def initUI(self):
-        self.line_edit.setGeometry(50, 50, 200, 30)
-        self.button.setGeometry(50, 100, 100, 30)
-        self.line_edit.setPlaceholderText("Enter your name")
-        self.line_edit.setStyleSheet("font-size: 20px; font-family: Poppins;")
-        self.button.setStyleSheet("font-size: 20px; font-family: Poppins;")
-        self.line_edit.setMaxLength(10)
-        self.button.clicked.connect(self.submit)
+        # Red Button
+        self.red_button = QPushButton("Red")
+        self.red_button.setStyleSheet("""
+            QPushButton {
+                background-color: #E53935;
+                color: white;
+                border-radius: 10px;
+                font: bold 16px;
+                padding: 10px 20px;
+            }
+            QPushButton:hover {
+                background-color: #FF6659;
+                color: #212121;
+            }
+        """)
 
-    def submit(self):
-        text = self.line_edit.text()
-        print(f"Submitted text: {text}")
+        # Yellow Button
+        self.yellow_button = QPushButton("Yellow")
+        self.yellow_button.setStyleSheet("""
+            QPushButton {
+                background-color: #FFEB3B;
+                color: #212121;
+                border-radius: 10px;
+                font: bold 16px;
+                padding: 10px 20px;
+            }
+            QPushButton:hover {
+                background-color: #FFF176;
+                color: #E53935;
+            }
+        """)
+
+        # Green Button
+        self.green_button = QPushButton("Green")
+        self.green_button.setStyleSheet("""
+            QPushButton {
+                background-color: #43A047;
+                color: white;
+                border-radius: 10px;
+                font: bold 16px;
+                padding: 10px 20px;
+            }
+            QPushButton:hover {
+                background-color: #66BB6A;
+                color: #212121;
+            }
+        """)
+
+        layout = QVBoxLayout()
+        layout.addWidget(self.red_button)
+        layout.addWidget(self.yellow_button)
+        layout.addWidget(self.green_button)
+        central_widget.setLayout(layout)
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    window = MainWindow()
-    window.setWindowTitle("Python GUI")
+    window = ColorfulButtonsApp()
     window.show()
     sys.exit(app.exec_())
